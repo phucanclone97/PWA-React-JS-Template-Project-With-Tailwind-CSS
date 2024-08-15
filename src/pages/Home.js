@@ -47,6 +47,9 @@ function Home({ count, increment, decrement }) {
         >
           Decrement
         </button>
+
+        <button className="btn btn-primary mx-4">Primary Button</button>
+
       </div>
     </div>
   );

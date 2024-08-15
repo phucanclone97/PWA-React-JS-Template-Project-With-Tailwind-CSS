@@ -22,12 +22,12 @@ function App() {
       <nav className="bg-blue-500 p-4">
         <ul className="flex space-x-4">
           <li>
-            <Link to="/" className="text-white hover:text-gray-200">
+            <Link to="/" className="text-white hover:text-gray-200 mx-4">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" className="text-white hover:text-gray-200">
+            <Link to="/about" className="text-white hover:text-gray-200 mx-4">
               About
             </Link>
           </li>
