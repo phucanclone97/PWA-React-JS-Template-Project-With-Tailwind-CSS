@@ -7,7 +7,7 @@ function About({ count, increment, decrement }) {
       <div>
         <button
           onClick={increment}
-          className="bg-green-500 text-white py-2 px-4 rounded mr-2 hover:bg-green-600"
+          className="bg-green-500 text-white py-2 px-4 rounded mx-2 hover:bg-green-600"
         >
           Increment
         </button>
