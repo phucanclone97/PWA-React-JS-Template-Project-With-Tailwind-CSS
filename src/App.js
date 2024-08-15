@@ -1,9 +1,9 @@
 import React from "react";
-
-import useHomeStore from "./stores/HomeStore";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import useAboutStore from "./stores/AboutStore";
 import About from "./pages/About";
+import useHomeStore from "./stores/HomeStore";
+import useAboutStore from "./stores/AboutStore";
 
 function App() {
   const {
@@ -18,16 +18,47 @@ function App() {
   } = useAboutStore();
 
   return (
-    <div>
-      <h1>Home Count: {homeCount}</h1>
-      <button onClick={homeIncrement}>Increment</button>
-      <button onClick={homeDecrement}>Decrement</button>
-      <Home />
-      <h1>About Count: {aboutCount}</h1>
-      <button onClick={aboutIncrement}>Increment</button>
-      <button onClick={aboutDecrement}>Decrement</button>
-      <About />
-    </div>
+    <Router>
+      <nav className="bg-blue-500 p-4">
+        <ul className="flex space-x-4">
+          <li>
+            <Link to="/" className="text-white hover:text-gray-200">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="text-white hover:text-gray-200">
+              About
+            </Link>
+          </li>
+        </ul>
+      </nav>
+
+      <div className="container mx-auto p-4">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                count={homeCount}
+                increment={homeIncrement}
+                decrement={homeDecrement}
+              />
+            }
+          />
+          <Route
+            path="/about"
+            element={
+              <About
+                count={aboutCount}
+                increment={aboutIncrement}
+                decrement={aboutDecrement}
+              />
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
