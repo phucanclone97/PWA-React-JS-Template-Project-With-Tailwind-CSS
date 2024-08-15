@@ -1,5 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
 
 function Home({ count, increment, decrement }) {
   const { t, i18n } = useTranslation();
@@ -13,44 +15,48 @@ function Home({ count, increment, decrement }) {
       <h1 className="text-2xl font-bold mb-4">{t("welcome")}</h1>
       <p className="mb-4">{t("description")}</p>
 
-      <div className="mb-4">
-        <button
+      <Box className="mb-4">
+        <Button
+          variant="contained"
+          color="primary"
           onClick={() => changeLanguage("en")}
-          className="bg-blue-500 text-white py-2 px-4 rounded mx-2 hover:bg-blue-600"
+          className="mx-2"
         >
           English
-        </button>
-        <button
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
           onClick={() => changeLanguage("ar")}
-          className="bg-blue-500 text-white py-2 px-4 rounded mx-2 hover:bg-blue-600"
+          className="mx-2"
         >
           Arabic
-        </button>
-        <button
+        </Button>
+        <Button
+          variant="contained"
+          color="primary"
           onClick={() => changeLanguage("he")}
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
         >
           Hebrew
-        </button>
-      </div>
+        </Button>
+      </Box>
+
       <h2 className="text-xl font-semibold mb-2">Home Count: {count}</h2>
-      <div>
-        <button
+      <Box>
+        <Button
+          variant="contained"
+          color="success"
           onClick={increment}
-          className="bg-green-500 text-white py-2 px-4 rounded mx-2 hover:bg-green-600"
+          sx={{ mx: 2 }} // MUI styling
+          className="bg-blue-500 hover:bg-green-600" // Tailwind CSS classes
         >
           Increment
-        </button>
-        <button
-          onClick={decrement}
-          className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
-        >
+        </Button>
+
+        <Button variant="contained" color="error" onClick={decrement}>
           Decrement
-        </button>
-
-        <button className="btn btn-primary mx-4">Primary Button</button>
-
-      </div>
+        </Button>
+      </Box>
     </div>
   );
 }

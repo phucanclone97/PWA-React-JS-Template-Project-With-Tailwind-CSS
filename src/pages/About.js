@@ -1,25 +1,34 @@
 import React from "react";
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 
 function About({ count, increment, decrement }) {
   return (
-    <div className="text-center bg-red-100 p-4 rounded shadow-md mx-auto max-w-md">
-      <h2 className="text-xl font-semibold mb-2">About Count: {count}</h2>
-      <div>
-        <button
-          onClick={increment}
-          className="bg-green-500 text-white py-2 px-4 rounded mx-2 hover:bg-green-600"
-        >
-          Increment
-        </button>
-        <button
-          onClick={decrement}
-          className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
-        >
-          Decrement
-        </button>
-      </div>
-      <h1 className="text-2xl font-bold mt-4">About Page</h1>
-    </div>
+    <Card className="mx-auto max-w-md shadow-md">
+      <CardContent>
+        <h2 className="text-xl font-semibold mb-2 text-center">About Count: {count}</h2>
+        <Box className="text-center">
+          <Button
+            variant="contained"
+            color="success"
+            onClick={increment}
+            className="mx-2"
+          >
+            Increment
+          </Button>
+          <Button
+            variant="contained"
+            color="error"
+            onClick={decrement}
+          >
+            Decrement
+          </Button>
+        </Box>
+        <h1 className="text-2xl font-bold mt-4 text-center">About Page</h1>
+      </CardContent>
+    </Card>
   );
 }
 
