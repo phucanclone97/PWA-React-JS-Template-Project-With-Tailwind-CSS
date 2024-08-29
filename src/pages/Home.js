@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
+import { Button, Space } from "antd"; // Importing Button and Space from Ant Design
 
 function Home({ count, increment, decrement }) {
   const { t, i18n } = useTranslation();
@@ -15,48 +14,40 @@ function Home({ count, increment, decrement }) {
       <h1 className="text-2xl font-bold mb-4">{t("welcome")}</h1>
       <p className="mb-4">{t("description")}</p>
 
-      <Box className="mb-4">
+      <Space className="mb-4">
+        {/* Replaced MUI Button with Antd Button */}
         <Button
-          variant="contained"
-          color="primary"
+          type="primary"
           onClick={() => changeLanguage("en")}
           className="mx-2"
         >
           English
         </Button>
+
         <Button
-          variant="contained"
-          color="primary"
+          type="primary"
           onClick={() => changeLanguage("ar")}
           className="mx-2"
         >
           Arabic
         </Button>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => changeLanguage("he")}
-        >
+
+        <Button type="primary" onClick={() => changeLanguage("he")}>
           Hebrew
         </Button>
-      </Box>
+      </Space>
 
       <h2 className="text-xl font-semibold mb-2">Home Count: {count}</h2>
-      <Box>
-        <Button
-          variant="contained"
-          color="success"
-          onClick={increment}
-          sx={{ mx: 2 }} // MUI styling
-          className="bg-blue-500 hover:bg-green-600" // Tailwind CSS classes
-        >
+
+      <Space>
+        <Button type="primary" onClick={increment}>
           Increment
         </Button>
 
-        <Button variant="contained" color="error" onClick={decrement}>
+        <Button type="primary" onClick={decrement}>
           Decrement
         </Button>
-      </Box>
+      </Space>
     </div>
   );
 }
