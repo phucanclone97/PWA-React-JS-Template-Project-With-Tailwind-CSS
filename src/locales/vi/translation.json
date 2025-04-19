@@ -1,0 +1,27 @@
+{
+  "personalInfo": "Thông tin cá nhân",
+  "back": "Quay lại",
+  "fullName": "Họ và tên",
+  "fullNamePlaceholder": "Nhập họ và tên",
+  "email": "Email",
+  "emailPlaceholder": "Nhập email của bạn",
+  "password": "Mật khẩu",
+  "passwordPlaceholder": "Nhập mật khẩu tối thiểu 8 ký tự",
+  "confirmPassword": "Nhập lại mật khẩu",
+  "confirmPasswordPlaceholder": "Nhập lại chính xác mật khẩu",
+  "dob": "Ngày sinh",
+  "dobPlaceholder": "Nhập ngày/tháng/năm",
+  "gender": "Giới tính",
+  "male": "Nam",
+  "female": "Nữ",
+  "address": "Địa chỉ của bạn",
+  "addressSelectPlaceholder": "Chọn Tỉnh/Thành phố, Quận/Huyện...",
+  "addressStreetPlaceholder": "Nhập tên đường, toà nhà, số nhà",
+  "continue": "Tiếp tục",
+  "validation": {
+    "required": "{{field}} là bắt buộc",
+    "minLength": "{{field}} phải có ít nhất {{count}} ký tự",
+    "email": "Định dạng email không hợp lệ",
+    "passwordMatch": "Mật khẩu không khớp"
+  }
+}

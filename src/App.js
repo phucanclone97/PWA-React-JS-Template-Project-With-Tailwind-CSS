@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import useHomeStore from "./stores/HomeStore";
 import useAboutStore from "./stores/AboutStore";
+import Form from "./pages/Form";
 
 const { Header, Content } = Layout; // Destructuring Ant Design Layout components
 
@@ -32,6 +33,9 @@ function App() {
             <Menu.Item key="2">
               <Link to="/about">About</Link>
             </Menu.Item>
+            <Menu.Item key="3">
+              <Link to="/form">Form</Link>
+            </Menu.Item>
           </Menu>
         </Header>
 
@@ -57,6 +61,7 @@ function App() {
                 />
               }
             />
+            <Route path="/form" element={<Form />} />
           </Routes>
         </Content>
       </div>
