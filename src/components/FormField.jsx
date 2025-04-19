@@ -46,7 +46,7 @@ function FormField({
           {...register(id, validationRules)}
           className={`block w-full rounded-lg border ${
             error ? "border-red-500" : "border-gray-300"
-          } py-2.5 ${hasIcon ? "pl-11" : "px-3"} ${
+          } py-2.5 ${hasIcon ? "pl-10 " : "px-3"} ${
             /* Adjust padding based on icon */
             type === "select" ? "pr-8 appearance-none" : "" // Add padding/appearance for select
           } text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6`}
