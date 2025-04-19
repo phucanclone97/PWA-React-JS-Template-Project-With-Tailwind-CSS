@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 html[dir="rtl"] {
-    direction: rtl;
-    /* text-align: right; */
-  }
-  
-  html  [dir="ltr"] {
-    direction: ltr;
-    /* text-align: left; */
-  }
-  
+  direction: rtl;
+  /* text-align: right; */
+}
+
+html [dir="ltr"] {
+  direction: ltr;
+  /* text-align: left; */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

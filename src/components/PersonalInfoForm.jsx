@@ -45,28 +45,7 @@ function PersonalInfoForm() {
   };
 
   return (
-    <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md w-full max-w-md">
-      {/* Header with Back Button */}
-      <div className="flex items-center mb-6">
-        <button className="bg-gray-100 p-2 rounded-full hover:bg-gray-200 mr-3">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6 text-gray-700"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 19.5 8.25 12l7.5-7.5"
-            />
-          </svg>
-        </button>
-        <h1 className="text-xl font-bold text-gray-800">{t("back")}</h1>
-      </div>
-
+    <div className="bg-white p-4 sm:p-8 rounded-lg shadow-md max-w-md">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <FormField
           id="fullName"
@@ -140,7 +119,7 @@ function PersonalInfoForm() {
             <button
               type="button"
               onClick={() => handleGenderChange("male")}
-              className={`flex items-center justify-center px-4 py-2.5 border rounded-lg text-sm font-medium transition-colors duration-150 ${
+              className={`flex items-center px-4 py-2.5 border rounded-lg text-sm font-medium transition-colors duration-150 ${
                 selectedGender === "male"
                   ? "bg-blue-100 border-blue-500 text-blue-700"
                   : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
@@ -152,7 +131,7 @@ function PersonalInfoForm() {
             <button
               type="button"
               onClick={() => handleGenderChange("female")}
-              className={`flex items-center justify-center px-4 py-2.5 border rounded-lg text-sm font-medium transition-colors duration-150 ${
+              className={`flex items-center px-4 py-2.5 border rounded-lg text-sm font-medium transition-colors duration-150 ${
                 selectedGender === "female"
                   ? "bg-pink-100 border-pink-500 text-pink-700"
                   : "bg-white border-gray-300 text-gray-700 hover:bg-gray-50"
