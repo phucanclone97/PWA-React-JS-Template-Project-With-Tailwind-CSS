@@ -1,58 +1,80 @@
-# PWA-React-JS-Template-Project-With-Tailwind-CSS
-
-## Overview
-
-This is a public template for building Progressive Web Apps (PWAs) using React.js and styling with Tailwind CSS. You can use this template as a starting point for your web app projects.
+# Personal Information Form - Progressive Web App
 
 ### Features
 
-- **React.js:** Create dynamic and responsive user interfaces with React.
-- **Tailwind CSS:** Easily style your app with a utility-first CSS framework.
+- **Multi-language Support**: Vietnamese and English localization using react-i18next
+- **Form Validation**: Complete field validation using react-hook-form
+- **Progressive Web App**: Offline capability, installable on mobile devices
+- **Responsive Design**: Built with Tailwind CSS for a mobile-first experience
+- **Component Architecture**: Modular and reusable components
+- **Icon System**: SVG icons in a dedicated icons directory
 
 ## Getting Started
 
-To use this template, follow these steps:
+To run this project locally, follow these steps:
 
-1. Clone this repository to your local machine:
-
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/PWA-React-JS-Template-Project-With-Tailwind-CSS.git
-   ```
-
-2. Change into the project directory:
+1. Clone the repository:
 
    ```bash
-   cd PWA-React-JS-Template-Project-With-Tailwind-CSS
+   git clone https://github.com/phucanclone97/PWA-React-JS-Template-Project-With-Tailwind-CSS.git
    ```
 
-3. Install the project dependencies:
+2. Install the dependencies:
 
    ```bash
    npm install
    ```
 
-4. Start the development server:
+3. Start the development server:
 
    ```bash
    npm start
    ```
 
-Your PWA will be running at `http://localhost:3000`. Open your browser and navigate to this URL to view the project in action.
+Your app will be running at `http://localhost:3000`. Open your browser to view the project.
 
-## Building and Deployment
+## Project Structure
 
-To create a production-ready build of your project, run:
+```
+src/
+├── components/       # UI components
+│   ├── FormField.jsx # Reusable form field component
+│   └── PersonalInfoForm.jsx # Main form component
+├── icons/            # SVG icon components
+├── locales/          # Translation files
+│   ├── en/           # English translations
+│   └── vi/           # Vietnamese translations
+└── i18n.js           # i18n configuration
+```
+
+## Building for Production
+
+Create a production-ready build with:
 
 ```bash
 npm run build
 ```
 
-This will generate a `build` directory containing optimized files that you can deploy to your hosting provider of choice.
+The optimized files will be in the `build` directory. This build includes service worker registration for PWA functionality.
 
-## Contributing
+## PWA Features
 
-This is a public repository, but you can still make improvements and customizations for your specific projects. Feel free to modify the template to suit your needs.
+This application includes:
+
+- **Offline Support**: Core app functionality works without an internet connection
+- **Installable**: Can be added to home screen on mobile devices
+- **App Manifest**: Configured with appropriate icons and theme colors
+- **Caching Strategies**: Uses a combination of precaching and runtime caching
+
+## Testing the PWA
+
+To test PWA functionality:
+
+1. Build the application: `npm run build`
+2. Serve the build folder: `serve -s build`
+3. Access the application via the provided URL
+4. Check the "Application" tab in browser DevTools to verify service worker and manifest
 
 ---
 
-Thank you for using this PWA React.js template with Tailwind CSS. Happy coding!
+Built with React, Tailwind CSS, and react-hook-form.
