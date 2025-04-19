@@ -9,11 +9,9 @@ const FemaleIcon = (props) => (
     stroke="currentColor"
     {...props}
   >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M10.5 13.5v-3m0 0V7.5m0 3H7.5M10.5 10.5h3m-3 3a8.25 8.25 0 1 1 16.5 0 8.25 8.25 0 0 1-16.5 0Z"
-    />
+    {/* Standard Venus Symbol (♀) Path */}
+    <circle cx="12" cy="9.5" r="5.5" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v7m-3-3h6" />
   </svg>
 );
 
