@@ -157,7 +157,7 @@ function PersonalInfoForm() {
             <select
               id="addressRegion"
               {...register("addressRegion")}
-              className={`block w-auto rounded-lg border ${
+              className={`block w-full rounded-lg border ${
                 errors.addressRegion ? "border-red-500" : "border-gray-300"
               } py-2.5 px-3 text-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 appearance-none pr-8`}
               defaultValue=""
@@ -189,7 +189,7 @@ function PersonalInfoForm() {
 
         <button
           type="submit"
-          className="w-auto bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 mt-6"
+          className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-300 mt-6"
         >
           {t("continue")}
         </button>
