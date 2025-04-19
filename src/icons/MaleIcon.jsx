@@ -9,10 +9,12 @@ const MaleIcon = (props) => (
     stroke="currentColor"
     {...props}
   >
+    {/* Simpler and standard Mars Symbol (♂) */}
+    <circle cx="10" cy="14" r="5.25" />
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
-      d="M15.75 15.75l-2.47-2.47a5.25 5.25 0 10-7.425-7.425 5.25 5.25 0 007.425 7.425l2.47 2.47m0 0l3.535-3.536M15.75 15.75v-3.536h-3.536"
+      d="M14.25 9.75L19.5 4.5m0 0h-4.5m4.5 0v4.5"
     />
   </svg>
 );
