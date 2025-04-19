@@ -54,7 +54,7 @@
     "required": "{{field}} is required",
     "minLength": "{{field}} must be at least {{count}} characters long",
     "maxLength": "{{field}} must be less than {{count}} characters long",
-    "email": "{{field}} must be a valid email address",
+    "pattern": "{{field}} must be a valid email address",
     "passwordMatch": "Passwords do not match"
   }
 }

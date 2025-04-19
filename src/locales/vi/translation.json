@@ -21,7 +21,7 @@
   "validation": {
     "required": "{{field}} là bắt buộc",
     "minLength": "{{field}} phải có ít nhất {{count}} ký tự",
-    "email": "Định dạng email không hợp lệ",
+    "pattern": "Định dạng email không hợp lệ",
     "passwordMatch": "Mật khẩu không khớp"
   }
 }
