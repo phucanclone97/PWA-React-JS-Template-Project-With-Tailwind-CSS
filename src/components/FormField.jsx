@@ -44,7 +44,7 @@ function FormField({
           type={type}
           id={id}
           {...register(id, validationRules)}
-          className={`block w-60 rounded-lg border ${
+          className={`block w-80 rounded-lg border ${
             error ? "border-red-500" : "border-gray-300"
           } py-2.5 ${hasIcon ? "pl-12" : "px-6"} ${
             /* Adjust padding based on icon */
