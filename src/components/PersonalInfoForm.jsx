@@ -48,14 +48,14 @@ function PersonalInfoForm() {
     <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md w-full max-w-md">
       {/* Header with Back Button */}
       <div className="flex items-center mb-6">
-        <button className="p-2 rounded-full hover:bg-gray-200 mr-2">
+        <button className="bg-gray-100 p-2 rounded-full hover:bg-gray-200 mr-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-6 h-6"
+            className="w-6 h-6 text-gray-700"
           >
             <path
               strokeLinecap="round"
@@ -64,9 +64,7 @@ function PersonalInfoForm() {
             />
           </svg>
         </button>
-        <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
-          {t("personalInfo")}
-        </h1>
+        <h1 className="text-xl font-bold text-gray-800">{t("back")}</h1>
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
