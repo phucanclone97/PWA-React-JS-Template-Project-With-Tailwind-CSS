@@ -8,6 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Form />} />
+        <Route path="/form" element={<Form />} />
       </Routes>
     </Router>
   );

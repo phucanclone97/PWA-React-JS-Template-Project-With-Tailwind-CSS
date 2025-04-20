@@ -6,7 +6,7 @@ function Form() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-gray-200 flex flex-col p-2">
+    <div className="min-h-screen overflow-x-hidden bg-gray-200 flex flex-col p-4">
       <div className="flex items-center">
         <button className="bg-gray-100 p-2 rounded-full hover:bg-gray-200 mr-3">
           <svg
