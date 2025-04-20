@@ -1,9 +1,21 @@
 import React from "react";
 import PersonalInfoForm from "../components/PersonalInfoForm";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
+
+const LANGUAGE_PARAM = "lang";
 
 function Form() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+  const [searchParams] = useSearchParams();
+  const language = searchParams.get(LANGUAGE_PARAM);
+
+  useEffect(() => {
+    if (language) {
+      i18n.changeLanguage(language);
+    }
+  }, [language]);
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-gray-200 flex flex-col p-4">
