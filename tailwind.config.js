@@ -4,7 +4,7 @@ module.exports = {
   important: "#root",
   theme: {
     screens: {
-      xs: "360px",
+      xs: "259px",
       sm: "576px",
       md: "960px",
       lg: "1440px",
